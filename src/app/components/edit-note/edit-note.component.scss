@@ -1,0 +1,39 @@
+@import "../../../variables.scss";
+
+.new-note{
+    background-color: #fff;
+    box-shadow: 0px 20px 40px rgba(77, 77, 77, 0.05);
+    border-radius: 15px;
+    padding:20px;
+}
+
+.new-note textarea{
+    min-height:300px;
+    padding:10px;
+}
+
+.new-note .bottom{
+    display:flex;
+}
+
+.new-note .bottom .form-group{
+    width:100%;
+}
+
+.new-note .bottom .form-group:nth-child(2){
+    padding-left:10px;
+}
+
+.new-note .edit-image{
+    display:flex;
+    align-items:center;
+}
+
+.new-note .edit-image img{
+    margin-right:10px
+}
+
+.new-note .edit-image .btn{
+    padding:5px;
+    font-size:14px;
+}

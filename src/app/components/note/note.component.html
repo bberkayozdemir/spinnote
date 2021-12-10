@@ -1,0 +1,24 @@
+<div class="note">
+    <div class="left">
+        <img *ngIf="note.image !== ''"  [lazyLoad]="note.image!" [defaultImage]="defaultImage" alt="" >
+        <img *ngIf="note.image === ''" [lazyLoad]="defaultImage" [defaultImage]="defaultImage" alt="" >
+        <div *ngIf="note.priority !== 6" class="priority">
+            Öncelik: <span>{{note.priority}}</span>
+        </div>
+    </div>
+    <div class="content">
+        {{note.content}}
+    </div>
+    <div class="right">
+        <a href="javascript:;" (click)="onDelete(note)">
+            <fa-icon 
+                [icon]="faTimes">
+            </fa-icon>
+        </a>
+        <a routerLink="{{'/dashboard/edit/' + note.id}}">
+            <fa-icon 
+                [icon]="faEdit">
+            </fa-icon>
+        </a>
+    </div>
+</div>

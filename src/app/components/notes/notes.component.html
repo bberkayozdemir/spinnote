@@ -1,0 +1,40 @@
+<div class="notes-order">
+    <div class="search">
+        <input type="search" [(ngModel)]="search" (ngModelChange)="onSearch()" class="form-control" placeholder="ara..."/>
+    </div>
+    <select name="sort" [(ngModel)]="sort" (ngModelChange)="onSortChange()" class="form-control">
+        <option selected value="">Sıralama</option>
+        <option value="new">Yeniden Eskiye</option>
+        <option value="old">Eskiden Yeniye</option>
+        <option value="priority-high">Öncelik Derecesi Yüksek</option>
+        <option value="priority-low">Öncelik Derecesi Düşük</option>
+    </select>
+</div>
+<div class="notes" (scroll)="onScroll($event)">
+    <div *ngIf="search===''&&loaded&&notes.length==0" class="no-notes">
+        Henüz içerik girilmedi
+    </div>
+    <div *ngIf="search!==''&&loaded&&notes.length==0" class="no-notes">
+        Aradığınız terimlerle bir not bulunamadı
+    </div>
+    <app-note *ngFor="let note of notes" [note]="note" (onDeleteNote)="deleteNote(note)"></app-note>
+    <!--<button (click)="loadmore()" >Load more</button>-->
+</div>
+
+<div class="notifications">
+    <div *ngFor="let notification of notifications" class="notification">
+        Not Silindi
+    </div>
+</div>
+
+<div class="modal" *ngIf="modalOpen">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            Silmek istediğinize emin misiniz? 
+        </div>
+        <div class="actions">
+            <button (click)="deleteNoteOk()" class="btn btn-primary">Evet</button>
+            <button (click)="closeModal()" class="btn btn-secondary">Hayır</button>
+        </div>
+    </div>
+</div>

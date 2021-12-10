@@ -1,0 +1,76 @@
+@import "../../../variables.scss";
+
+.notes-order{
+    display:flex;
+    justify-content: space-between;
+    margin:20px 0px;
+    align-items: center;
+}
+
+.notes-order .title{
+    margin:0px
+}
+
+.notes-order select{
+    width:200px;
+}
+
+.notes .no-notes{
+    width:100%;
+    text-align:center;
+    margin-top:50px;
+    color:#777777
+}
+
+.notifications{
+    position: fixed;
+    right:10px;
+    top:10px;
+}
+
+.notifications .notification{
+    background-color:$secondary;
+    color:$primary;
+    padding:10px 20px;
+    border-radius: 15px;
+    margin-bottom:10px;
+    cursor:default;
+    transition: all .2s ease-in-out;
+}
+
+.modal{
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.modal .modal-dialog{
+    background-color:#fff;
+    min-width:300px;
+    border-radius: 15px;
+    padding:20px;
+}
+
+.modal .modal-dialog .modal-content{
+    padding-bottom:20px
+}
+
+.modal .modal-dialog .actions{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+}
+
+.modal .modal-dialog .actions .btn{
+    flex:1;
+}
+
+.modal .modal-dialog .actions .btn:nth-child(1){
+    margin-right:5px;
+}

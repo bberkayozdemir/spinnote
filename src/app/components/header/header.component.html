@@ -1,0 +1,19 @@
+<header>
+    <div class="container">
+        <a routerLink="/dashboard" class="logo">
+            <img src="/assets/logo.png" alt="logo"/>
+            <div class="logo-text">
+                <span>SPIN</span>NOTE
+            </div>
+        </a>
+        <div class="header-right">
+            <a routerLink="/dashboard/new" class="btn btn-secondary">
+                <fa-icon 
+                    [icon]="faPlus">
+                </fa-icon>
+                Not Ekle
+            </a>
+            <a class="h-logout" routerLink="/logout">Çıkış Yap</a>
+        </div>
+    </div>
+</header>

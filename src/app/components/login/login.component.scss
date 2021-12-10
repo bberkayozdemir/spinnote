@@ -1,0 +1,136 @@
+@import "../../../variables.scss";
+
+.login{
+    display:flex;
+}
+
+.login .login-left{
+    width:33%;
+    background-color: $primary;
+    min-height:100vh;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:0px 20px;
+}
+
+.login .login-left img{
+    width:247px;
+}
+
+.login .login-left .title{
+    color:$purple;
+    font-size:30px;
+    font-weight: bold;
+    margin:20px 0px;
+}
+
+.login .login-left .description{
+    color:$secondary;
+    text-align:center;
+    font-size:17px;
+}
+
+.login .login-right{
+    width:67%;
+    min-height:100vh;
+    height:100%;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content: center;
+    position: relative;
+}
+
+.login .login-right .top{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top:50px;
+    position: absolute;
+    top:50px;
+}
+
+.login .login-right .top .logo{
+    display:flex;
+    font-size:46px;
+    margin-bottom:10px;
+    padding-bottom:10px;
+    border-bottom:1px solid $secondary;
+}
+
+.login .login-right .top .logo .logo-text{
+    color:$primary;
+}
+
+.login .login-right .top .logo .logo-text span{
+    font-weight: bold;
+}
+
+.login .login-right .top .logo img{
+    padding-top:7px;
+    height:46px;
+    margin-right:15px;
+}
+
+.login .login-right .top-text{
+    font-size:28px;
+    color:$primary
+}
+
+.login .login-right .login-form{
+    width:50%;
+
+}
+
+.login .login-right .form-submit{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.login .login-right .form-submit .error{
+    color:$primary;
+}
+
+@media (max-width: 992px) {
+    .login{
+        flex-direction: column-reverse;
+    }
+
+    .login .login-right{
+        min-height:0;
+        width:100%;
+        padding-bottom:50px;
+        padding:100px 0px
+    }
+
+    .login .login-left{
+        justify-content:flex-start;
+        width:100%;
+        padding:50px 0px
+    }
+    .login .login-right .top{
+        position: unset;
+        margin-bottom:40px
+    }
+
+    .login .login-right .login-form{
+        width:80%;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+    .login .login-right .login-form{
+        width:100%;
+        padding:0px 10px;
+    }
+}

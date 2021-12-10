@@ -1,0 +1,42 @@
+<div class="login">
+    <div class="login-left">
+        <img src="/assets/notepad.png"/>
+        <div class="title">
+            Notlarınız Artık Dijitalde
+        </div>
+        <div class="description">
+            Defter, kitap ve ajandayla uğraşmayın!
+            Aradığınız kolaylık SpinNote güvencesi ile her yerde
+        </div>
+    </div>
+    <div class="login-right">
+        <div class="top">
+            <div class="logo">
+                <img src="/assets/logo-colored.png" alt="logo"/>
+                <div class="logo-text">
+                    <span>SPIN</span>NOTE
+                </div>
+            </div>
+            
+            <div class="top-text">
+                Giriş Yap
+            </div>
+        </div>
+
+        <form class="login-form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Kullanıcı Adı</label>
+                <input type="text" name="username" id="username" [(ngModel)]="username" class="form-control" placeholder="Kullanıcı Adı"/>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre</label>
+                <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control" placeholder="Şifre"/>
+            </div>
+            <div class="form-submit">
+                <div class="error">{{error}}</div>
+                <input type="submit" value="Giriş Yap" class="btn btn-secondary"/>
+            </div>
+            
+        </form>
+    </div>
+</div>
