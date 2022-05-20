@@ -1,10 +1,16 @@
 # SpinNote
-Kaynak kodu.
+Note application
 
-# Kurulum
-npm start ile anguları başlatabilirsiniz.
-npm run server ile json-server (fake back-end) i çalıştırabilirsiniz.
+## Installion
 
-# Giriş
+```sh
+#to start frontend
+npm start
+
+#to start fake backend
+npm run server
+```
+
+## Credentials
 kullanıcı adı: admin
 şifre: 12345
