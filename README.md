@@ -12,5 +12,5 @@ npm run server
 ```
 
 ## Credentials
-kullanıcı adı: admin
-şifre: 12345
+username: admin
+password: 12345
